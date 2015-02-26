@@ -5,7 +5,7 @@ DELETE FROM plugin WHERE id = "1679";
 DELETE FROM plugin_sid where plugin_id = "1679";
 DELETE FROM software_cpe where plugin = 'imperva:1679';
 
-INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/a:Imperva:Imperva SecureSphere:-', 'SecureSphere','SecureSphere v10','Imperva SecureSphere V10','Imperva', 'imperva:1679');
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/a:Imperva:Imperva SecureSphere v10:-', 'SecureSphere v10','SecureSphere v10','Imperva SecureSphere V10','imperva', 'imperva:1679');
 
 
 INSERT IGNORE INTO plugin (id, type, name, description) VALUES (1679, 1, 'imperva-securesphere', 'Imperva SecureSphere');
