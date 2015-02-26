@@ -3,9 +3,9 @@
 
 DELETE FROM plugin WHERE id = "1679";
 DELETE FROM plugin_sid where plugin_id = "1679";
-DELETE FROM software_cpe where plugin = 'Imperva:1679';
+DELETE FROM software_cpe where plugin = 'imperva:1679';
 
-INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Imperva:Imperva SecureSphere:-', 'SecureSphere','SecureSphere v10','Imperva SecureSphere V10','Inperva', 'Inperva:1679');
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/a:Imperva:Imperva SecureSphere:-', 'SecureSphere','SecureSphere v10','Imperva SecureSphere V10','Imperva', 'imperva:1679');
 
 
 INSERT IGNORE INTO plugin (id, type, name, description) VALUES (1679, 1, 'imperva-securesphere', 'Imperva SecureSphere');
@@ -175,7 +175,7 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, prio
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (1679, 311, NULL, NULL, 'Distributed Illegal Byte Code Character in Header Name' , 0, 1);
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (1679, 312, NULL, NULL, 'Distributed Unknown HTTP Request Method' , 0, 1);
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (1679, 313, NULL, NULL, 'Distributed Illegal Byte Code Character in Method' , 0, 1);
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (1679, 314, NULL, NULL, 'Untraceable SSL Sessions' , 0, 1);
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (1679, 314, NULL, NULL, 'Untraceable SSL Sessions: Protocol violation' , 0, 1);
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (1679, 315, NULL, NULL, 'Unauthorized Host' , 0, 1);
 
 
