@@ -3,12 +3,12 @@ Setlocal EnableDelayedExpansion
 ::*****************************************
 ::* SET YOUR OSSEC SERVER IP ADDRESS HERE *
 ::*****************************************
-SET OSSECSERVER=192.168.5.8
+SET OSSECSERVER=USM_SERVER_IP
 
 ::*****************************************
 ::* SET YOUR OSSEC INSTALL PACKAGE HERE   *
 ::*****************************************
-SET SRC-DIR=\\ZEKEME.COM\netlogon\OSSEC\
+SET SRC-DIR=\\APPSERVER\APP_LOCATION\
 SET AGENTPACKAGE=ossec-agent-win32-2.8.exe
 
 
