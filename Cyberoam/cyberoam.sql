@@ -15,8 +15,9 @@ INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUE
 
 INSERT IGNORE INTO plugin (id, type, name, description) VALUES (10091, 1, 'Cyberoam UTM', 'Cyberoam UTM');
 
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1001, 3, NULL, 'Cyberoam Content Filtering');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1002, 3, NULL, 'Cyberoam Firewall Event');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1003, 3, NULL, 'Cyberoam IDP Event');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1004, 3, NULL, 'Cyberoam Generic Event');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1001, 3, NULL, 'Cyberoam: Content Filtering');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1002, 3, NULL, 'Cyberoam: Firewall Event');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1003, 3, NULL, 'Cyberoam: IDP Event');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1004, 3, NULL, 'Cyberoam: Generic Event');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1005, 3, NULL, 'Cyberoam: Authentication Event');
 
