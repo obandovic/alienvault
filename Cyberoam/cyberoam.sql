@@ -20,4 +20,5 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1003, 3, NULL, 'Cyberoam: IDP Event');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1004, 3, NULL, 'Cyberoam: Generic Event');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1005, 3, NULL, 'Cyberoam: Authentication Event');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (10091, 1005, 3, NULL, 'Cyberoam: Admin Event');
 
