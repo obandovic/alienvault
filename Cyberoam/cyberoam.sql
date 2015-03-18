@@ -19,6 +19,6 @@ INSERT IGNORE INTO plugin (id, type, name, description) VALUES
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES 
 (1001, 10091, NULL, NULL, 'Cyberoam Content Filtering', , ),
 (1002, 10091, NULL, NULL, 'Cyberoam Firewall Event', , ),
-(1003, 10091, NULL, NULL, 'Cyberoam IDP Event, , ),
+(1003, 10091, NULL, NULL, 'Cyberoam IDP Event', , ),
 (1004, 10091, NULL, NULL, 'Cyberoam Generic Event', , ),
 ;
