@@ -11,7 +11,7 @@ DELETE FROM plugin WHERE id = "10091";
 DELETE FROM plugin_sid where plugin_id = "10091";
 
 
-INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:CYBEROAM:FIREWALL:-', 'UTM','UTM','CYBEROAM UTM','CYBEROAM', 'cyberoam:10091');
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Cyberoam:Firewall:-', 'Cyberoam UTM','-','Cyberoam UTM','Cyberoam', 'cyberoam:10091');
 
 INSERT IGNORE INTO plugin (id, type, name, description) VALUES (10091, 1, 'Cyberoam UTM', 'Cyberoam UTM');
 
