@@ -17,11 +17,7 @@ DELETE FROM plugin_sid where plugin_id = "PLUGIN ID";
 INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:VENDOR:DEVICE:-', 'DEVICE','VERSION OR DEVICE_MODEL','FULL VERDOR DEVICE NAME','VENDOR', 'VENDOR:PLUGINID');
 
 --PLUGIN CONTENT - PLUGIN ID AND DESCRIPTION
-INSERT IGNORE INTO plugin (id, type, name, description) VALUES 
-([PLUGIN ID], 1, 'PLUGIN NAME', 'PLUGIN DESCRIPTION');
+INSERT IGNORE INTO plugin (id, type, name, description) VALUES ([PLUGIN ID], 1, 'PLUGIN NAME', 'PLUGIN DESCRIPTION');
 
 --PLUGIN SID CONTENT - MULTIPLE TRANSLATIONS.
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES 
-(, , NULL, NULL, 'EVENT NAME', , ),
-
-;
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (, , NULL, NULL, 'EVENT NAME', , );
