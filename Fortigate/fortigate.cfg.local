@@ -1,22 +1,9 @@
 # Alienvault plugin
-# Author: Alienvault Team at devel@alienvault.com
-# Plugin fortigate id:1554 version: 0.0.4
+# Author: Victor Obando
+# Plugin fortigate version 5.2
 # Last modification: 3/18/2015 by Victor Obando
-#
-# Accepted products:
-# fortinet - fortigate-800c -
-# fortinet - fortigate-4.0 -
-# Description:
-# 
-# Syslog Configuration. 
-# In order to configure this plugin to read the logs in the correct place, 
-# please add the bellow configuration to your rsyslog configuration folder:
-# file: /etc/rsyslog.d/zzzzz_fortigate.conf
-# -- begin file 
-# if $fromhost-ip isequal 'YOUR_DEVICE_IP' then /var/log/fortigate.log
-# if $fromhost isequal 'YOUR_DEVICE_HOSTNAME' then /var/log/fortigate.log
-# & ~
-# -- end file 
+# Description: Partial Plugin update, this will work with the existing fortigate.sql file in USM
+#				this particular plugin is for systems running version 5.1, 5.2 and above. 
 
 
 [DEFAULT]
