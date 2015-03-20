@@ -3,7 +3,7 @@
 # Plugin fortigate version 5.2
 # Last modification: 3/18/2015 by Victor Obando
 # Description: Partial Plugin update, this will work with the existing fortigate.sql file in USM
-#				this particular plugin is for systems running version 5.1, 5.2 and above. 
+
 
 
 [DEFAULT]
