@@ -27,7 +27,7 @@ exclude_sids=4,5,8,9,10
 
 [0000 - fortigate-traffic (App Firewall URL Access)]
 event_type=event
-regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}\d(?P<msgid>\d{5})\s+.*?srcip=(?P<src_ip>\S+)\s+src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+).*?service="(?P<protocol>\S+)".*?appcat="(?P<app_cat>\S+)\sapp="(?P<app>\S+).*?hostname="(?P<url>\S+)"(?P<extra_data>.*)
+regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}(?P<msgid>\d{6})\s+.*?srcip=(?P<src_ip>\S+)\s+src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+).*?service="(?P<protocol>\S+)".*?appcat="(?P<app_cat>\S+)\sapp="(?P<app>\S+).*?hostname="(?P<url>\S+)"(?P<extra_data>.*)
 plugin_sid={$msgid}
 device={$device}
 date={normalize_date($date)}
@@ -44,7 +44,7 @@ userdata4={$extra_data}
 
 [0001 - fortigate-traffic (App Firewall)]
 event_type=event
-regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}\d(?P<msgid>\d{5})\s+.*?srcip=(?P<src_ip>\S+)\s+src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+).*?service="(?P<protocol>\S+)".*?app="(?P<app>\S+)".*?appcat="(?P<app_cat>\S+)".*?devtype="(?P<dev_type>.*?)\sosname="(?P<os>\S+)
+regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}(?P<msgid>\d{6})\s+.*?srcip=(?P<src_ip>\S+)\s+src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+).*?service="(?P<protocol>\S+)".*?app="(?P<app>\S+)".*?appcat="(?P<app_cat>\S+)".*?devtype="(?P<dev_type>.*?)\sosname="(?P<os>\S+)
 plugin_sid={$msgid}
 device={$device}
 date={normalize_date($date)}
@@ -61,7 +61,7 @@ userdata4={$os}
 
 [0002 - fortigate-traffic (generic) 1]
 event_type=event
-regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}\d(?P<msgid>\d{5})\s+.*?srcip=(?P<src_ip>\S+)\s+src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+)
+regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}(?P<msgid>\d{6})\s+.*?srcip=(?P<src_ip>\S+)\s+src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+)
 plugin_sid={$msgid}
 device={$device}
 date={normalize_date($date)}
@@ -73,7 +73,7 @@ dst_port={$dst_port}
 
 [0003 - fortigate-traffic (generic) - Extra Data]
 event_type=event
-regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}\d(?P<msgid>\d{5})\s+.*?srcip=(?P<src_ip>\S+).*?src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+)(?P<extra_data>.*)
+regexp=(?P<date>\w+\s+\d+\s+\d+:\d+:\d+).*?devname=(?P<device>\S+).*?\s+logid=\d{2}\d{2}(?P<msgid>\d{6})\s+.*?srcip=(?P<src_ip>\S+).*?src_?port=(?P<src_port>\S+).*?dstip=(?P<dst_ip>\S+).*?dst_?port=(?P<dst_port>\S+)(?P<extra_data>.*)
 plugin_sid={$msgid}
 device={$device}
 date={normalize_date($date)}
@@ -83,3 +83,38 @@ dst_ip={$dst_ip}
 dst_port={$dst_port}
 userdata1={$extra_data}
 
+
+
+
+
+
+
+TRAFFIC EVENTS:
+
+NAT
+#date=2015-03-17 time=22:04:14 logid=0000000013 type=traffic subtype=forward level=notice vd=root srcip=172.16.1.231 srcport=55284 srcintf="lan" dstip=172.20.52.75 dstport=443 dstintf="wan1" poluuid=ed0b58e0-9b0b-51e4-20cf-e77100c45585 sessionid=379 action=timeout policyid=46 dstcountry="Reserved" srccountry="Reserved" trandisp=snat transip=172.16.202.2 transport=55284 service="HTTPS" proto=6 duration=13 sentbyte=180 rcvdbyte=56 sentpkt=3 rcvdpkt=1 devtype="Linux PC" osname="Linux" osversion="2.x" mastersrcmac=00:0c:29:4c:12:90 srcmac=00:0c:29:4c:12:90 crscore=10 craction=262144 crlevel=medium
+(?P<date>date=\d+-\d+-\d+)\stime=(?P<time>\d+:\d+:\d+)\slogid=\d{2}\d{2}(?P<log_id>\d{6})\stype=(?P<event_type>\S+)\ssubtype=(?P<event_subtype>\S+)\slevel=(?P<level>\S+).*?srcip=(?<src_ip>\S+)\ssrcport=(?P<src_port>\d+)\ssrcintf=(?P<src_int>\S+)\sdstip=(?P<dst_ip>\S+)\sdstport=(?P<dst_port>\d+)\sdstintf=(?P<dst_int>\S+).*?action=(?P<action>\S+).*?transip=(?P<trans_ip>\S+).*?service=(?P<service>\S+)(?P<extra_data>.*)
+
+GENERIC
+(?P<date>date=\d+-\d+-\d+)\stime=(?P<time>\d+:\d+:\d+)\slogid=\d{2}\d{2}(?P<log_id>\d{6})\stype=(?P<event_type>\S+)\ssubtype=(?P<event_subtype>\S+)\slevel=(?P<level>\S+).*?srcip=(?<src_ip>\S+)\ssrcport=(?P<src_port>\d+)\ssrcintf=(?P<src_int>\S+)\sdstip=(?P<dst_ip>\S+)\sdstport=(?P<dst_port>\d+)\sdstintf=(?P<dst_int>\S+).*?action=(?P<action>\S+)(?P<extra_data>.*)
+
+
+
+ANTIVIRUS EVENTS:
+
+FILENAME URL CKSUM
+(?P<date>date=\d+-\d+-\d+)\stime=(?P<time>\d+:\d+:\d+)\slogid=(?P<log_type>\d{2})(?P<log_subtype>\d{2})(?P<log_id>\d{6})\stype=(?P<event_type>\S+)\ssubtype=(?P<event_subtype>\S+).*?level=(?P<level>\S+).*?msg=(?P<msg>".*?").*?service=(?P<protocol>\S+).*?srcip=(?P<src_ip>\S+)\sdstip=(?P<dst_ip>\S+)\ssrcport=(?P<src_port>\d+)\sdstport=(?P<dst_port>\d+).*?filename=(?P<file_name>\S+).*?url=(?P<url>\S+).*?user=(?P<username>\S+).*?analyticscksum=(?P<cksum>\S+)
+
+FILENAME NO-URL CKSUM
+#date=2015-03-23 time=11:25:35 logid=0201009233 type=utm subtype=virus eventtype=analytics level=notice vd="root" msg="File submitted to Sandbox." action=analytics service=HTTP sessionid=7777580 srcip=10.0.82.3 dstip=68.67.128.174 srcport=54858 dstport=80 srcintf="Whumo2" dstintf="wan1" proto=6 direction=N/A filename="bounce" quarskip=No-skip profile="default" user="JLAGUNA" group="GrupoVPNSSL" agent="Mozilla/5.0" analyticscksum="fc19c1121251bbf3297a4d3af9a52b90114a7fe6e442b2e623130e1d740e6227" analyticssubmit=true
+(?P<date>date=\d+-\d+-\d+)\stime=(?P<time>\d+:\d+:\d+)\slogid=(?P<log_type>\d{2})(?P<log_subtype>\d{2})(?P<log_id>\d{6})\stype=(?P<event_type>\S+)\ssubtype=(?P<event_subtype>\S+).*?level=(?P<level>\S+).*?msg=(?P<msg>".*?").*?service=(?P<protocol>\S+).*?srcip=(?P<src_ip>\S+)\sdstip=(?P<dst_ip>\S+)\ssrcport=(?P<src_port>\d+)\sdstport=(?P<dst_port>\d+).*?filename=(?P<file_name>\S+).*?user=(?P<username>\S+).*?analyticscksum=(?P<cksum>\S+)
+
+
+NO FILENAME - EMAIL CKSUM
+#date=2015-03-23 time=11:54:58 logid=0201009233 type=utm subtype=virus eventtype=analytics level=notice vd="root" msg="File submitted to Sandbox." action=analytics service=POP3 sessionid=7831421 srcip=10.0.82.12 dstip=208.91.113.80 srcport=64806 dstport=110 srcintf="Whumo2" dstintf="wan1" proto=6 direction=incoming quarskip=No-skip profile="default" user="TBURGALETA" group="GrupoVPNSSL" from="fbraut@fortinet.com" to="JuanPablo.Plaza@ntt.eu" recipient="tburgaleta" analyticscksum="e773f419f874937b34202d406086bd835a60e05a17d569dbe094be937b0f90c0" analyticssubmit=true
+(?P<date>date=\d+-\d+-\d+)\stime=(?P<time>\d+:\d+:\d+)\slogid=\d{2}\d{2}(?P<log_id>\d{6})\stype=(?P<event_type>\S+)\ssubtype=(?P<event_subtype>\S+).*?level=(?P<level>\S+).*?msg=(?P<msg>".*?").*?service=(?P<protocol>\S+).*?srcip=(?P<src_ip>\S+)\sdstip=(?P<dst_ip>\S+)\ssrcport=(?P<src_port>\d+)\sdstport=(?P<dst_port>\d+).*?user=(?P<username>\S+).*?from=(?P<from>\S+).*?recipient=(?P<recepient>\S+).*?analyticscksum=(?P<cksum>\S+)
+
+
+INTRUSION DETECTION
+IDS GENERIC
+(?P<date>date=\d+-\d+-\d+)\stime=(?P<time>\d+:\d+:\d+)\slogid=\d{2}\d{2}(?P<log_id>\d{6})\stype=(?P<event_type>\S+)\ssubtype=(?P<event_subtype>\S+).*?severity=(?P<severity>\S+)\ssrcip=(?P<src_ip>\S+)\sdstip=(?P<dst_ip>\S+)\ssrcintf=(?P<src_int>\S+)\sdstintf=(?P<dst_int>\S+).*?srcport=(?P<src_port>\d+)\sdstport=(?P<>\d+)\sdirection=(?P<direction>\S+).*?ref=(?P<ref>\S+)\suser=(?P<user>\S+).*?msg=(?P<msg>".*?")
