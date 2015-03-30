@@ -723,4 +723,4 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43535, 3, NULL, 'LOG_ID_EVENT_WIRELESS_WIDS_WEP_IV');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43542, 3, NULL, 'LOG_ID_EVENT_WIRELESS_WIDS_EAPOL_FLOOD');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43544, 3, NULL, 'LOG_ID_EVENT_WIRELESS_WIDS_MGMT_FLOOD');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43546, 3, NULL, 'LOG_ID_EVENT_WIRELESS_WIDS_SPOOF_DEAUTH
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43546, 3, NULL, 'LOG_ID_EVENT_WIRELESS_WIDS_SPOOF_DEAUTH');
