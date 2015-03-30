@@ -4,33 +4,29 @@
 -- www.alienvault.com
 -- Last Modified: 3-30-2015
 
-
 DELETE FROM software_cpe where plugin = 'fortigate-5x:9250';
 DELETE FROM plugin WHERE id = '9250';
 DELETE FROM plugin_sid where plugin_id = '9250';
 
-
 INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Fortinet:Fortigate:-', 'Fortigate UTM 5.x','-','Fortigate UTM 5.x','Fortinet', 'fortigate-5x:9250');
-INSERT IGNORE INTO plugin (id, type, name, description, product_type, vendor) VALUES (9250, 1, 'Fortigate 5x', 'Fortigate FortiOS 5x', 10, 'Fortinet');
+INSERT IGNORE INTO plugin (id, type, name, description, product_type, vendor) VALUES (9250, 1, 'Fortigate-5x', 'Fortigate FortiOS 5x', 10, 'Fortinet');
 
-
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000002, 3, NULL, 'LOG_ID_TRAFFIC_ALLOW');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000003, 3, NULL, 'LOG_ID_TRAFFIC_DENY');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000004, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_START');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000005, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_ICMP_ALLOW');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000006, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_ICMP_DENY');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000007, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_INVALID');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000008, 3, NULL, 'LOG_ID_TRAFFIC_WANOPT');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000009, 3, NULL, 'LOG_ID_TRAFFIC_WEBCACHE');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000010, 3, NULL, 'LOG_ID_TRAFFIC_EXPLICIT_PROXY');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000011, 3, NULL, 'LOG_ID_TRAFFIC_FAIL_CONN');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000012, 3, NULL, 'LOG_ID_TRAFFIC_MULTICAST');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000013, 3, NULL, 'LOG_ID_TRAFFIC_END_FORWARD');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000014, 3, NULL, 'LOG_ID_TRAFFIC_END_LOCAL');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000015, 3, NULL, 'LOG_ID_TRAFFIC_START_FORWARD');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000016, 3, NULL, 'LOG_ID_TRAFFIC_START_LOCAL');
-INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 000017, 3, NULL, 'LOG_ID_TRAFFIC_SNIFFER');
-
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00002, 3, NULL, 'LOG_ID_TRAFFIC_ALLOW');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00003, 3, NULL, 'LOG_ID_TRAFFIC_DENY');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00004, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_START');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00005, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_ICMP_ALLOW');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00006, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_ICMP_DENY');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00007, 3, NULL, 'LOG_ID_TRAFFIC_OTHER_INVALID');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00008, 3, NULL, 'LOG_ID_TRAFFIC_WANOPT');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00009, 3, NULL, 'LOG_ID_TRAFFIC_WEBCACHE');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00010, 3, NULL, 'LOG_ID_TRAFFIC_EXPLICIT_PROXY');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00011, 3, NULL, 'LOG_ID_TRAFFIC_FAIL_CONN');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00012, 3, NULL, 'LOG_ID_TRAFFIC_MULTICAST');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00013, 3, NULL, 'LOG_ID_TRAFFIC_END_FORWARD');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00014, 3, NULL, 'LOG_ID_TRAFFIC_END_LOCAL');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00015, 3, NULL, 'LOG_ID_TRAFFIC_START_FORWARD');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00016, 3, NULL, 'LOG_ID_TRAFFIC_START_LOCAL');
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 00017, 3, NULL, 'LOG_ID_TRAFFIC_SNIFFER');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 28672, 3, NULL, 'LOGID_APP_CTRL_IM_BASIC');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 28673, 3, NULL, 'LOGID_APP_CTRL_IM_BASIC_WITH_STATUS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 28674, 3, NULL, 'LOGID_APP_CTRL_IM_BASIC_WITH_COUNT');
@@ -43,7 +39,6 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 28706, 3, NULL, 'LOGID_APP_CTRL_IPS_RESET');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 28720, 3, NULL, 'LOGID_APP_CTRL_SSH_PASS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 28721, 3, NULL, 'LOGID_APP_CTRL_SSH_BLOCK');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 8192, 3, NULL, 'MESGID_INFECT_WARNING');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 8193, 3, NULL, 'MESGID_INFECT_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 8194, 3, NULL, 'MESGID_INFECT_MIME_WARNING');
@@ -84,12 +79,10 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 8972, 3, NULL, 'MESGID_SCAN_ARCHIVE_UNHANDLED_WARNING');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 8973, 3, NULL, 'MESGID_SCAN_ARCHIVE_UNHANDLED_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 9233, 3, NULL, 'MESGID_ANALYTICS_SUBMITTED');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 24576, 3, NULL, 'LOG_ID_DLP_WARN');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 24577, 3, NULL, 'LOG_ID_DLP_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 24578, 3, NULL, 'LOG_ID_DLP_DOC_SOURCE');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 24579, 3, NULL, 'LOG_ID_DLP_DOC_SOURCE_ERROR');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 20480, 3, NULL, 'LOGID_ANTISPAM_EMAIL_SMTP_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 20481, 3, NULL, 'LOGID_ANTISPAM_EMAIL_SMTP_BWORD_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 20487, 3, NULL, 'LOGID_ANTISPAM_ENDPOINT_MM7_WARNING');
@@ -114,7 +107,6 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 20506, 3, NULL, 'LOGID_EMAIL_MAPI_GENERAL_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 20507, 3, NULL, 'LOGID_ANTISPAM_EMAIL_MAPI_BWORD_NOTIF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 20508, 3, NULL, 'LOGID_ANTISPAM_EMAIL_MAPI_NOTIF');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 12288, 3, NULL, 'LOG_ID_WEB_CONTENT_BANWORD');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 12289, 3, NULL, 'LOG_ID_WEB_CONTENT_MMS_BANWORD');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 12290, 3, NULL, 'LOG_ID_WEB_CONTENT_EXEMPTWORD');
@@ -602,7 +594,6 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 47202, 3, NULL, 'LOG_ID_AMC_EXIT_BYPASS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 47203, 3, NULL, 'LOG_ID_ENTER_BYPASS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 47204, 3, NULL, 'LOG_ID_EXIT_BYPASS');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 38010, 3, NULL, 'LOG_ID_FIPS_ENCRY_FAIL');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 38011, 3, NULL, 'LOG_ID_FIPS_DECRY_FAIL');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 38031, 3, NULL, 'LOG_ID_FSSO_LOGON');
@@ -633,7 +624,6 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43028, 3, NULL, 'LOG_ID_EVENT_AUTH_PROXY_AUTHORIZATION_FAILED');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43029, 3, NULL, 'LOG_ID_EVENT_AUTH_WARNING_SUCCESS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43030, 3, NULL, 'LOG_ID_EVENT_AUTH_WARNING_TBL_FULL');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 37124, 3, NULL, 'MESGID_NEG_I_P1_ERROR');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 37125, 3, NULL, 'MESGID_NEG_I_P2_ERROR');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 37126, 3, NULL, 'MESGID_NEG_NO_STATE_ERROR');
@@ -679,7 +669,6 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 41988, 3, NULL, 'LOG_ID_EVENT_SSL_VPN_SETTING_UPDATE');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 41989, 3, NULL, 'LOG_ID_EVENT_SSL_VPN_CERT_ERR');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 41990, 3, NULL, 'LOG_ID_EVENT_SSL_VPN_CERT_UPDATE_FAILED');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 40960, 3, NULL, 'LOGID_EVENT_WAD_WEBPROXY_FWD_SRV_ERROR');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 48000, 3, NULL, 'LOG_ID_WAD_SSL_RCV_HS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 48001, 3, NULL, 'LOG_ID_WAD_SSL_RCV_WRG_HS');
@@ -705,7 +694,6 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALU
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 48102, 3, NULL, 'LOG_ID_WAD_AUTH_FAIL_OTH');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 48300, 3, NULL, 'LOG_ID_WRG_SVR_FGT_CONF');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 48301, 3, NULL, 'LOG_ID_UNEXP_APP_TYPE');
-
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43520, 3, NULL, 'LOG_ID_EVENT_WIRELESS_SYS');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43521, 3, NULL, 'LOG_ID_EVENT_WIRELESS_ROGUE');
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name) VALUES (9250, 43522, 3, NULL, 'LOG_ID_EVENT_WIRELESS_WTP');
