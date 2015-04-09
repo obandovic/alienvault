@@ -1066,3 +1066,5 @@ INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, prio
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (9502, 2776, NULL, NULL, 'Barracuda SCAN: Whitelisted Message - Per-Domain Sender', 2, 2);
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (9502, 2777, NULL, NULL, 'Barracuda SCAN: Whitelisted Message - Per Domain Client IP', 2, 2);
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (9502, 2778, NULL, NULL, 'Barracuda SCAN: Whitelisted Message - Sender spoofed', 2, 2);
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (9502, 2780, NULL, NULL, 'Barracuda Firewall: Msg Forward Event', 2, 2);
+INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (9502, 2781, NULL, NULL, 'Barracuda Firewall: Generic Event', 2, 2);
