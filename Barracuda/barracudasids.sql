@@ -1,6 +1,9 @@
 DELETE FROM plugin WHERE id = "9502";
 DELETE FROM plugin_sid where plugin_id = "9502";
+DELETE FROM software_cpe WHERE plugin_id = "barracuda:9502";
 
+
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Barracuda:Firewall:-', 'Barracuda Firewall','-','Barracuda Firewall','Barracuda', 'barracuda:9502');
 INSERT IGNORE INTO plugin (id, type, name, description) VALUES (9502, 1, 'Barracuda', 'Barracuda');
 
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, class_id, name, priority, reliability) VALUES (9502, 1, NULL, NULL, 'Barracuda SEND: Delivered Message', 2, 2);
