@@ -14,7 +14,10 @@ INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUE
 
 
 INSERT INTO plugin_sid (plugin_id, sid, category_id, subcategory_id, class_id, name) VALUES
-(1695, 1, 8, 188, NULL, 'Cisco-Meraki: flow log message'),
-(1695, 2, 8, 188, NULL, 'Cisco-Meraki: url log message'),
-(1695, 3, 15, 171, NULL, 'Cisco-Meraki: ids alert'),
-(1695, 4, 10, 71,  NULL, 'Cisco-Meraki: event log');
+(1695, 1, 8, 188, NULL, 'Cisco-Meraki: Flow Event'),
+(1695, 2, 22, 115, NULL, 'Cisco-Meraki: Web Filter Event'),
+(1695, 3, 13, 171, NULL, 'Cisco-Meraki: IDS Alert'),
+(1695, 4, 10, 71,  NULL, 'Cisco-Meraki: Generic Evet'),
+(1695, 5, 27, 186,  NULL, 'Cisco-Meraki: Stablished VPN Event'),
+(1695, 6, 27, 186,  NULL, 'Cisco-Meraki: VPN User Event'),
+(1695, 7, 27, 186,  NULL, 'Cisco-Meraki: Generic VPN Event');
