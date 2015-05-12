@@ -5,12 +5,12 @@
 -- Last Modified:
 
 
-DELETE FROM software_cpe where plugin = 'bjniptables:9205';
+DELETE FROM software_cpe where plugin = 'iptables:9205';
 DELETE FROM plugin WHERE id = "9205";
 DELETE FROM plugin_sid where plugin_id = "9205";
 
-INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:BJN:IPTables:-', 'BJN Ip Tables','0.3','IPTables Firewall logs','BJN', 'bjniptables:9205');
-INSERT IGNORE INTO plugin (id, type, name, description, product_type, vendor) VALUES (9205, 411, 'bjniptables', 'IPTables Firewall logs from syslog data using --log-level 6', 10, 'BJN');
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:IPTables:IPTables:-', 'Linux IP tables','-','IPTables Firewall logs','IPTables', 'iptables:9205');
+INSERT IGNORE INTO plugin (id, type, name, description, product_type, vendor) VALUES (9205, 411, 'IPTables', 'IPTables Firewall logs', 10, 'IPTables');
 
 
 -- PLUGIN SID CONTENT - MULTIPLE TRANSLATIONS.
