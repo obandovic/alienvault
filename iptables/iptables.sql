@@ -1,6 +1,6 @@
 -- [BJN IPTables]
 -- plugin_id: [9205]
--- Author: VICTOR OBANDO
+-- Author:
 -- www.alienvault.com
 -- Last Modified:
 
