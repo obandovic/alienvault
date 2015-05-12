@@ -1,4 +1,4 @@
--- [BJN IPTables]
+-- [IPTables]
 -- plugin_id: [9205]
 -- Author:
 -- www.alienvault.com
