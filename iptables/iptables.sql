@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 -- [Linux IPTables]
+=======
+-- [IPTables]
+>>>>>>> origin/master
 -- plugin_id: [9205]
 -- Author:Victor Obando
 -- www.alienvault.com
