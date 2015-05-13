@@ -5,11 +5,11 @@
 -- Last Modified:
 
 
-DELETE FROM software_cpe where plugin = 'iptables:9205';
+DELETE FROM software_cpe where plugin = 'linux_iptables:9205';
 DELETE FROM plugin WHERE id = "9205";
 DELETE FROM plugin_sid where plugin_id = "9205";
 
-INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:IPTables:IPTables:-', 'Linux IP tables','-','IPTables Firewall logs','IPTables', 'iptables:9205');
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:IPTables:IPTables:-', 'Linux IP tables','-','IPTables Firewall logs','IPTables', 'linux_iptables:9205');
 INSERT IGNORE INTO plugin (id, type, name, description, product_type, vendor) VALUES (9205, 411, 'IPTables', 'IPTables Firewall logs', 10, 'IPTables');
 
 
