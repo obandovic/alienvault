@@ -1,4 +1,4 @@
--- juniper-srx
+-- Juniper-SRX
 -- plugin_id: 9510
 
 DELETE FROM plugin WHERE id = "9510";
