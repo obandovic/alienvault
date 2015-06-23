@@ -3,10 +3,14 @@
 
 DELETE FROM plugin WHERE id = "1626";
 DELETE FROM plugin_sid where plugin_id = "1626";
+DELETE FROM software_cpe where plugin = 'JuniperSRX:1626';
+
 
 INSERT IGNORE INTO `plugin` (`id` , `type` , `name` , `description` , `vendor`) VALUES (
 '1626', '1', 'juniper-srx', 'Juniper-SRX Router/Firewall/IDS/IPS', 'Juniper'
 );
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Juniper:Juniper-SRX:-', 'Juniper SRX','-','Juniper SRX','Juniper', 'JuniperSRX:1626');
+
 
 INSERT IGNORE INTO `plugin_sid` (`plugin_id`, `sid`, `reliability`, `priority`, `name`) VALUES
 (1626, 10, 1, 2, 'Juniper-SRX: RT_FLOW: A security session was not permitted by policy'),
