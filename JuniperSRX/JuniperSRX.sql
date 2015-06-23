@@ -9,7 +9,7 @@ DELETE FROM software_cpe where plugin = 'JuniperSRX:9510';
 INSERT IGNORE INTO `plugin` (`id` , `type` , `name` , `description` , `vendor`) VALUES (
 '9510', '1', 'Juniper-SRX', 'Juniper-SRX Router/Firewall/IDS/IPS', 'Juniper'
 );
-INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Juniper:Juniper-SRX:-', 'Juniper SRX','-','Juniper SRX','Juniper', 'JuniperSRX:9510');
+INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Juniper:Juniper-SRX:-', 'Juniper SRX','-','Juniper SRX FW','Juniper', 'JuniperSRX:9510');
 
 
 INSERT IGNORE INTO `plugin_sid` (`plugin_id`, `sid`, `reliability`, `priority`, `name`) VALUES
