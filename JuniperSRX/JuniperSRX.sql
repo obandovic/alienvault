@@ -32,6 +32,4 @@ INSERT IGNORE INTO `plugin_sid` (`plugin_id`, `sid`, `reliability`, `priority`, 
 (9510, 72, 1, 1, 'Juniper-SRX: RT_UTM: A web request is blocked'),
 (9510, 80, 1, 1, 'Juniper-SRX: PERF_MON: PFE cpu usage okay'),
 (9510, 81, 1, 1, 'Juniper-SRX: PERF_MON: PFE cpu threshold exceeded'),
-(9510, 82, 1, 1, 'Juniper-SRX: Close - AGE OUT'),
-(9510, 83, 1, 1, 'Juniper-SRX: Close - TCP FIN'),
 (9510, 90, 1, 1, 'Juniper-SRX: GENERIC_MESSAGE: Watchdog strobe');
