@@ -9,7 +9,7 @@ DELETE FROM plugin_sid where plugin_id = "9511";
 DELETE FROM software_cpe where plugin = 'JuniperNSM:9511';
 
 INSERT INTO plugin (id, type, name, description) VALUES 
-        (9511, 1, 'juniper-nsm', 'Juniper Network and Security Manager');
+        (9511, 1, 'Juniper-NSM', 'Juniper Network and Security Manager');
         
 INSERT IGNORE INTO software_cpe (cpe, name, version, line, vendor, plugin) VALUES ('cpe:/o:Juniper:Juniper-NSM:-', 'Juniper NSM','-','Juniper NSM','Juniper', 'JuniperNSM:9511');
 
