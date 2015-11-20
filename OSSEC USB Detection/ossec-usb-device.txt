@@ -23,3 +23,9 @@ Add the following line to the local ossec.conf file in the machine being monitor
 
 
 install and enable the ossec-usb-devices plugin under sensor configuration.
+
+
+Create a Directive called "Unauthorized USB Device Detected" and enter authorized device serial numbers in the following format
+!SerialSumber:XXXXXXX,!SerialNumber:XXXXXX,etc.
+
+Any USB not matching the serial numbers listed above will trigger an Alarm. 
