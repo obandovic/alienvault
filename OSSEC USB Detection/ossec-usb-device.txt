@@ -1,0 +1,25 @@
+Modify the local_rules.xml by adding the following line under Environment >> Detection >> Edit Rule / select local_rules.xml on the dropdown and click >> Rule Editor
+
+ <rule id="100051" level="7">
+    <if_sid>530</if_sid>
+    <match>ossec: output: 'wmic logicaldisk where drivetype=2 get deviceid, volumename, description, FileSystem, Size, VolumeSerialNumber</match>
+    <check_diff />
+    <description>New USB Device Found.</description>
+</rule> 
+
+
+make sure to add the component right before the "</group>"
+
+
+
+Add the following line to the local ossec.conf file in the machine being monitored. 
+
+
+<localfile>
+        <log_format>full_command</log_format>
+        <command>wmic logicaldisk where drivetype=2 get deviceid, volumename, description, FileSystem, Size, VolumeSerialNumber</command>
+<frequency>60</frequency>
+</localfile>
+
+
+install and enable the ossec-usb-devices plugin under sensor configuration.
