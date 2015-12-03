@@ -1,7 +1,7 @@
 DELETE FROM plugin WHERE id = '9276';
 DELETE FROM plugin_sid where plugin_id = '9276';
 
-INSERT IGNORE INTO plugin (id, type, name, description) VALUES (9276, 1, 'cisco-router', 'Cisco router');
+INSERT IGNORE INTO plugin (id, type, name, description) VALUES (9276, 1, 'cisco-router-1800', 'Cisco router 1800');
 
 INSERT IGNORE INTO plugin_sid (plugin_id, sid, category_id, subcategory_id, class_id, name, priority, reliability) VALUES
 (9276, 1, 11, 139, NULL, 'Cisco-AAA: Authentication, authorization, and accounting Emergency Event', 1, 8),
