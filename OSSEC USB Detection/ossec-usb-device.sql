@@ -2,7 +2,7 @@
 -- plugin_id: 9271
 -- Author: VICTOR OBANDO
 -- www.alienvault.com
--- Last Modified: 11/19/15
+-- Last Modified: 4/10/16
 
 
 DELETE FROM plugin WHERE id = "9271";
