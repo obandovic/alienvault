@@ -2,7 +2,7 @@ Modify the local_rules.xml by adding the following line under Environment >> Det
 
  <rule id="100051" level="7">
     <if_sid>530</if_sid>
-    <match>ossec: output: 'wmic logicaldisk where drivetype=2 get deviceid, volumename, description, FileSystem, Size, VolumeSerialNumber</match>
+    <match>ossec: output: 'wmic logicaldisk where "drivetype=2 AND NOT deviceid like "a:"" get deviceid, volumename, description, FileSystem, Size, VolumeSerialNumber</match>
     <check_diff />
     <description>New USB Device Found.</description>
 </rule> 
@@ -17,7 +17,7 @@ Add the following line to the local ossec.conf file in the machine being monitor
 
 <localfile>
         <log_format>full_command</log_format>
-        <command>wmic logicaldisk where drivetype=2 get deviceid, volumename, description, FileSystem, Size, VolumeSerialNumber</command>
+        <command>wmic logicaldisk where "drivetype=2 AND NOT deviceid like "a:"" get deviceid, volumename, description, FileSystem, Size, VolumeSerialNumber</command>
 <frequency>60</frequency>
 </localfile>
 
